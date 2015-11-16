@@ -43,6 +43,9 @@
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.delayedValue"}
             }
         },
         "observableButton": {
@@ -61,6 +64,9 @@
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.realtimeValue"}
             }
         },
         "textValueInput": {
@@ -70,7 +76,7 @@
                 "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true",
-                "placeholderValue": "Text"
+                "placeholderValue": "Enter New Value"
             }
         }
     }
