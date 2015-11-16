@@ -25,6 +25,14 @@
                 }
             ]
         },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Save"
+            }
+        },
         "buttonActionListener": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
@@ -43,20 +51,6 @@
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
-            }
-        },
-        "observableButton": {
-            "prototype": "montage/ui/button.reel",
-            "properties": {
-                "element": {"#": "observableButton"},
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true",
-                "enabled": true,
-                "formenctype": "application/x-www-form-urlencoded",
-                "formmethod": "get",
-                "label": "Save",
-                "type": "button"
             }
         },
         "realtimeText": {
@@ -85,9 +79,9 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <input data-montage-id="textValueInput" type="text">
-        <button data-montage-id="observableButton"></button>
         <p data-montage-id="realtimeText"></p>
         <p data-montage-id="delayedText"></p>
+        <button data-montage-id="button"></button>
     </div>
 </body>
 </html>
