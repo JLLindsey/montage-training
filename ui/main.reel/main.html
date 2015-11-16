@@ -16,14 +16,18 @@
                 "draggable": "true"
             }
         },
-        "changingText": {
-            "prototype": "montage/ui/text.reel",
+        "observableButton": {
+            "prototype": "montage/ui/button.reel",
             "properties": {
-                "element": {"#": "changingText"},
+                "element": {"#": "observableButton"},
                 "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true",
-                "value": "Hello World"
+                "enabled": true,
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "label": "Button",
+                "type": "button"
             }
         }
     }
@@ -31,7 +35,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <p data-montage-id="changingText"></p>
+        <button data-montage-id="observableButton"></button>
     </div>
 </body>
 </html>
