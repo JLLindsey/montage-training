@@ -12,8 +12,10 @@
             "properties": {
                 "element": {"#": "main"},
                 "contenteditable": "true",
+                "delayedValue": "delayed",
                 "dir": "ltr",
-                "draggable": "true"
+                "draggable": "true",
+                "realtimeValue": "realtime"
             },
             "listeners": [
                 {
@@ -33,6 +35,16 @@
                 "isHidden": true
             }
         },
+        "delayedText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "delayedText"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            }
+        },
         "observableButton": {
             "prototype": "montage/ui/button.reel",
             "properties": {
@@ -43,8 +55,28 @@
                 "enabled": true,
                 "formenctype": "application/x-www-form-urlencoded",
                 "formmethod": "get",
-                "label": "Button",
+                "label": "Save",
                 "type": "button"
+            }
+        },
+        "realtimeText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "realtimeText"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            }
+        },
+        "textValueInput": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textValueInput"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "placeholderValue": "Text"
             }
         }
     }
@@ -52,7 +84,10 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <input data-montage-id="textValueInput" type="text">
         <button data-montage-id="observableButton"></button>
+        <p data-montage-id="realtimeText"></p>
+        <p data-montage-id="delayedText"></p>
     </div>
 </body>
 </html>
