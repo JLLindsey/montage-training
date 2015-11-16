@@ -15,13 +15,23 @@
                 "dir": "ltr",
                 "draggable": "true"
             }
+        },
+        "changingText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "changingText"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Hello World"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-
+        <p data-montage-id="changingText"></p>
     </div>
 </body>
 </html>
